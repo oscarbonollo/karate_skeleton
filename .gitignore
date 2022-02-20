@@ -5,7 +5,7 @@ out/
 target/
 
 #intelliJ
-.u
+.idea/
 
 # Compiled class file
 *.class
