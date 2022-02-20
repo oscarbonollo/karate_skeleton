@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://mvnrepository.com"
+    }
+}
+
+sourceSets {
+    test {
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}
+
+dependencies {
+    testCompile 'com.intuit.karate:karate-junit5:1.1.0.RC1'
+    testCompile 'com.intuit.karate:karate-apache:0.9.6'
+    testCompile 'com.intuit.karate:karate-core:1.1.0.RC1'
+//    compile 'org.springframework:spring-jdbc:5.3.3'
+//    testCompile 'org.postgresql:postgresql:9.4-1206-jdbc42'
+//    testCompile 'com.oracle.database.jdbc:ojdbc8:21.1.0.0'
+
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "karate.env", System.properties.getProperty("karate.env")
+    outputs.upToDateWhen { false }
+    if (System.getProperty('debug', 'false') == 'true') {
+        jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9009'
+    }
+}
