@@ -1,2 +1,3 @@
-# features
-A useful skeleton for those wanting to learn more about the karate framework and to show off some of the key features of API testing.
+# Documentation
+Please go to the link for the Github Wiki page for this framework.
+https://github.com/oscarbonollo/karate_skeleton/wiki
