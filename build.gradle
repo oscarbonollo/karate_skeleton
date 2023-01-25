@@ -24,6 +24,8 @@ sourceSets {
 dependencies {
     testCompile 'com.intuit.karate:karate-junit5:1.1.0.RC1'
     testCompile 'com.intuit.karate:karate-core:1.1.0.RC1'
+    testCompile 'net.masterthought:cucumber-reporting:5.7.4'
+    testCompile 'junit:junit:4.13.2'
 }
 
 test {
