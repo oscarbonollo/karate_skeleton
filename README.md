@@ -6,4 +6,4 @@ All questions are also answered in this section.
 
 # Updates
 25/01/2023
-- Added cucumber-reporter support!
+Added cucumber-reporter support!
