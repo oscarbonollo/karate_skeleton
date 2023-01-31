@@ -29,7 +29,6 @@ public class TestParallel {
         String karateOutputPath = "target/surefire-reports/";
         long starttime = System.nanoTime();
         long endtime = System.nanoTime();
-//        System.setProperty("karate.env",System.getProperty("karate.env"));
         Results results = Runner.path("classpath:")
                 .outputCucumberJson(true)
                 .parallel(1);
